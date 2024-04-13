@@ -42,6 +42,8 @@ Nesse desafio utilizaremos o `Figma` que é uma ferramenta de design colaborativ
 - Variáveis e constantes 
 - Entrada de dados com `prompt()`
 - Entrada de dados e uso de variáveis
+- Funções
+  
 
 ### Git e GitHub:
 

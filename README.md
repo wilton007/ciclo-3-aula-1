@@ -1,4 +1,4 @@
-#  :new: Ciclo 1: Desafio 1 
+#  :new: Ciclo 2: Atividade 1
 
 ## Índice
 

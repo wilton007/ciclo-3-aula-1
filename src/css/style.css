@@ -1,0 +1,55 @@
+body {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+}
+
+#imagem {
+    width: 381px;
+    height: 353px;
+    
+}
+
+
+.geral {
+    margin-left: 100px;
+}
+
+.texto {
+    width: 157px;
+    height: 24px;
+    margin-left: 2px;
+}
+
+.entrada {
+    width: 200px;
+    height: 16px;
+    border-radius: 6px;
+    border-width: 1px;
+    padding: 4px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.entradaSelect {
+    width: 207px;
+    height: 25px;
+    border-radius: 6px;
+    border-width: 1px;
+    padding: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.botao {
+    margin-top: 40px;
+    margin-left: 100px;
+    width: 205px;
+    height: 22px;
+    border-radius: 6px;
+    border-width: 1px;
+    padding: 4px, 3px, 4px, 12px;
+    background-color: #284A5E;
+    color: aliceblue;
+    font-size: 12px;
+}

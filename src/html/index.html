@@ -14,21 +14,36 @@
   </div>
   <div class="geral">
     <label class="texto">Valor total da conta:</label><br>
-    <input class="entrada" type="text"><br>
+    <input class="entrada" type="text" id="totalConta"><br>
 
     <label class="texto">Incluir da taxa de serviço:</label><br>
-    <select class="entradaSelect">
+    <select class="entradaSelect" id="entradaSelect">
       <option value="sim">sim</option>
       <option value="nao">não</option>
     </select><br>
 
 
     <label class="texto">Quantidade de pagantes:</label><br>
-    <input class="entrada" type="text"><br>
+    <input class="entrada" type="text" id="qPessoas"><br>
 
   </div>
+  <dialog id="modal">
+    <label id="l1">Esse pagamento terá desconto?</label><br>
+    <label id="l2">Apenas para contas pagas em pix, débito ou dinheiro</label><br>
+    <button class="btModal" id="btSim">Sim</button>
+    <button class="btModal" id="btNao">Não</button>
+  </dialog>
 
-  <button class="botao">CALCULAR</button>
+  <dialog id="modelT">
+    <p>Valor da conta:</p>
+    <label id="valoresConta1"></label><br>
+    <label id="valoresConta2"></label><br>
+    <label id="valoresConta3"></label><br>
+    <button id="btColcuir">CONCLUIR</button>
+  </dialog>
+
+  <button class="botao" id="btCalcular">CALCULAR</button>
+  <script src="../js/service.js"></script>
 </body>
 
 </html>

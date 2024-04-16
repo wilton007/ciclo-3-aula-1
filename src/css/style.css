@@ -53,3 +53,32 @@ body {
     color: aliceblue;
     font-size: 12px;
 }
+
+.btModal{
+    width: 100px;
+    height: 25px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+#modal{
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#l1{
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+#l2{
+    font-size: 11px;
+    margin-left: 10px;
+    margin-top: 10px;
+   
+}
+
+#modelT{
+    height: 150px;
+}

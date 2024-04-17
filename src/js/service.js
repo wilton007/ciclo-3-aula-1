@@ -1,4 +1,4 @@
-let botao = document.getElementById('btCalcular')
+let botao = document.getElementById('btCalcular');
 let botaoSim = document.getElementById('btSim');
 let botaoNao = document.getElementById('btNao');
 let modal = document.getElementById('modal');
@@ -9,7 +9,7 @@ let Mtotal = document.getElementById('modelT');
 let valoresConta1 = document.getElementById('valoresConta1');
 let valoresConta2 = document.getElementById('valoresConta2');
 let valoresConta3 = document.getElementById('valoresConta3');
-let btColcuir = document.getElementById('btColcuir');
+let btColcuir = document.getElementById('btConcluir');
 
 
 botao.onclick = () => {

@@ -5,12 +5,12 @@
   <title>Título da página</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="./src/css/style.css" />
 </head>
 
 <body>
   <div class="imagem">
-    <img id="imagem" src="../img/logo.png">
+    <img id="imagem" src="./src/img/logo2.png">
   </div>
   <div class="geral">
     <label class="texto">Valor total da conta:</label><br>
@@ -35,15 +35,18 @@
   </dialog>
 
   <dialog id="modelT">
-    <p>Valor da conta:</p>
-    <label id="valoresConta1"></label><br>
-    <label id="valoresConta2"></label><br>
-    <label id="valoresConta3"></label><br>
-    <button id="btColcuir">CONCLUIR</button>
+    <div id="resolver">
+
+      <p class="modalText">Valor da conta:</p>
+      <label class="modalText" id="valoresConta1"></label><br>
+      <label class="modalText" id="valoresConta2"></label><br>
+      <label class="modalText" id="valoresConta3"></label><br>
+      <button class="modalText" id="btConcluir">CONCLUIR</button>
+    </div>
   </dialog>
 
   <button class="botao" id="btCalcular">CALCULAR</button>
-  <script src="../js/service.js"></script>
+  <script src="./src/js/service.js"></script>
 </body>
 
 </html>

@@ -1,18 +1,30 @@
 body {
     justify-content: center;
     align-items: center;
-    display: grid;
+    display: grid;   
 }
 
 #imagem {
     width: 381px;
     height: 353px;
-    
+    /* margin-left: 25px; */
+
+
+}
+
+.imagem{
+    /* justify-content: center;
+    align-items: center;
+    display: flex;
+     */
+
+     margin-bottom: 10px;
 }
 
 
 .geral {
-    margin-left: 100px;
+    margin-left: 90px;
+
 }
 
 .texto {
@@ -43,8 +55,8 @@ body {
 
 .botao {
     margin-top: 40px;
-    margin-left: 100px;
-    width: 205px;
+    margin-left: 90px;
+    width: 207px;
     height: 22px;
     border-radius: 6px;
     border-width: 1px;
@@ -54,31 +66,54 @@ body {
     font-size: 12px;
 }
 
-.btModal{
+.btModal {
     width: 100px;
     height: 25px;
     margin-left: 15px;
     margin-top: 10px;
 }
 
-#modal{
+#modal {
     align-items: center;
     justify-content: center;
-    
+    border-radius: 10px;
+    margin-bottom: 600px;
+
 }
 
-#l1{
+#l1 {
     margin-left: 25px;
     font-weight: bold;
 }
 
-#l2{
+#l2 {
     font-size: 11px;
     margin-left: 10px;
     margin-top: 10px;
-   
+
 }
 
-#modelT{
-    height: 150px;
+#modelT {
+    height: 200px;
+    width: 300px;
+    margin-left: 230px;
+    margin-top: 300px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    
+}
+
+#resolver{
+   margin-left: 60px; 
+}
+
+#btConcluir{
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.modalText{
+    font-size: 18px;
 }

@@ -12,8 +12,14 @@ let valoresConta3 = document.getElementById('valoresConta3');
 let btColcuir = document.getElementById('btConcluir');
 
 
+
 botao.onclick = () => {
-    modal.showModal();
+    if(qPessoas.value == '' || total.value == ''){
+      alert("Campo vazio!")
+    } else{
+
+        modal.showModal();
+    }
 }
 
 botaoSim.onclick = () => {
@@ -21,17 +27,13 @@ botaoSim.onclick = () => {
     if (select.value == 'sim') {
         a = a + (5 / qPessoas.value);
         let b = total.value - ((10 * total.value) / 100);
-        valoresConta1.innerHTML = `Total do consumo: ${b.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} R$`;
-        valoresConta2.innerHTML = `Taxa de serviço: 5,00 R$`;
-        valoresConta3.innerHTML = `Total por pessoa: ${a.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} R$`;
+        imprimir(a,b, 5);
         modal.close();
         Mtotal.showModal();
     } else {
 
         let b = total.value - ((10 * total.value) / 100);
-        valoresConta1.innerHTML = `Total do consumo: ${b.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} R$`;
-        valoresConta2.innerHTML = `Taxa de serviço: 0,00 R$`;
-        valoresConta3.innerHTML = `Total por pessoa: ${a.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} R$`;
+        imprimir(a,b, 0);
         modal.close();
         Mtotal.showModal();
 
@@ -39,31 +41,35 @@ botaoSim.onclick = () => {
 
 }
 
-btNao.onclick = () => {
+botaoNao.onclick = () => {
     let a = calcular(qPessoas.value, total.value, 0);
     if (select.value == 'sim') {
         a = a + (5 / qPessoas.value);
         let b = total.value;
-        valoresConta1.innerHTML = `Total do consumo: ${b.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} R$`;
-        valoresConta2.innerHTML = `Taxa de serviço: 5,00 R$`;
-        valoresConta3.innerHTML = `Total por pessoa: ${a.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} R$`;
+        imprimir(a,b,5)
         modal.close();
         Mtotal.showModal();
     } else {
 
         let b = total.value;
-        valoresConta1.innerHTML = `Total do consumo: ${b.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} R$`;
-        valoresConta2.innerHTML = `Taxa de serviço: 0,00 R$`;
-        valoresConta3.innerHTML = `Total por pessoa: ${a.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} R$`;
+        imprimir(a,b,0)
         modal.close();
         Mtotal.showModal();
 
     }
 }
 
+function imprimir(a, b, c){
+    valoresConta1.innerHTML = `Total do consumo: ${b.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} R$`;
+    valoresConta2.innerHTML = `Taxa de serviço: ${c.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} R$`;
+    valoresConta3.innerHTML = `Total por pessoa: ${a.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} R$`;
+}
+
 
 btColcuir.onclick = () => {
     Mtotal.close();
+    qPessoas.value = '';
+    total.value = '';
 }
 
 function calcular(pessoas, valorConta, porcentagem) {

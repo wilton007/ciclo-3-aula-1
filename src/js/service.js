@@ -70,6 +70,7 @@ btColcuir.onclick = () => {
     Mtotal.close();
     qPessoas.value = '';
     total.value = '';
+    document.getElementById('entradaSelect').selectedIndex = 0;
 }
 
 function calcular(pessoas, valorConta, porcentagem) {

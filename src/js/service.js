@@ -1,3 +1,4 @@
+
 let botao = document.getElementById('btCalcular');
 let botaoSim = document.getElementById('btSim');
 let botaoNao = document.getElementById('btNao');
@@ -15,9 +16,11 @@ let btColcuir = document.getElementById('btConcluir');
 
 botao.onclick = () => {
     if(qPessoas.value == '' || total.value == ''){
-      alert("Campo vazio!")
-    } else{
-
+      alert("Campo vazio!");
+    } else if(select.value == 'Incluir taxa de serviço ?'){
+        alert('marque a taxa de serviço');
+    }
+    else{
         modal.showModal();
     }
 }

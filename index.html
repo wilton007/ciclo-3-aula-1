@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-  <title >App do Garçon</title>
+  <title>App do Garçon</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="./src/css/style.css" />
@@ -12,43 +12,46 @@
   <div class="imagem">
     <img id="imagem" src="./src/img/logo2.png">
   </div>
+
+
   <div class="geral">
-    
     <input class="entrada" type="text" id="totalConta" placeholder="Digite o valor da conta"><br>
 
-    
-    <select class="entradaSelect" id="entradaSelect" >
+    <select class="entradaSelect" id="entradaSelect">
       <option disabled selected> Incluir taxa de serviço ?</option>
       <option value="sim">sim</option>
       <option value="nao">não</option>
     </select><br>
 
-
-    
     <input class="entrada" type="text" id="qPessoas" placeholder="Digite a quantidade de pagantes"><br>
+  </div>
+
+  <div id="containerModal">
+    <dialog id="modal">
+      <label id="l1">Esse pagamento terá desconto?</label><br>
+      <label id="l2">Apenas para contas pagas em pix, débito ou dinheiro</label><br>
+      <button class="btModal" id="btSim">Sim</button>
+      <button class="btModal" id="btNao">Não</button>
+    </dialog>
 
   </div>
-  <dialog id="modal">
-    <label id="l1">Esse pagamento terá desconto?</label><br>
-    <label id="l2">Apenas para contas pagas em pix, débito ou dinheiro</label><br>
-    <button class="btModal" id="btSim">Sim</button>
-    <button class="btModal" id="btNao">Não</button>
-  </dialog>
 
-  <dialog id="modelT">
-    <div id="resolver">
+  <div id="containerModal2">
+    <dialog id="modelT">
+      <div id="alinhaTexModal">
+        <p class="modalText">Valor da conta:</p>
+        <label class="modalText" id="valoresConta1"></label><br>
+        <label class="modalText" id="valoresConta2"></label><br>
+        <label class="modalText" id="valoresConta3"></label><br>
+        <button class="modalText" id="btConcluir">CONCLUIR</button>
+      </div>
+    </dialog>
+  </div>
 
-      <p class="modalText">Valor da conta:</p>
-      <label class="modalText" id="valoresConta1"></label><br>
-      <label class="modalText" id="valoresConta2"></label><br>
-      <label class="modalText" id="valoresConta3"></label><br>
-      <button class="modalText" id="btConcluir">CONCLUIR</button>
-    </div>
-  </dialog>
 
   <button class="botao" id="btCalcular">CALCULAR</button>
 
-  
+
   <script src="./src/js/service.js"></script>
 </body>
 

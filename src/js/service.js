@@ -3,7 +3,6 @@ let botao = document.getElementById('btCalcular');
 let botaoSim = document.getElementById('btSim');
 let botaoNao = document.getElementById('btNao');
 let modal = document.getElementById('modal');
-let select = document.getElementById('entradaSelect');
 let total = document.getElementById('totalConta');
 let qPessoas = document.getElementById('qPessoas');
 let Mtotal = document.getElementById('modelT');
@@ -11,16 +10,31 @@ let valoresConta1 = document.getElementById('valoresConta1');
 let valoresConta2 = document.getElementById('valoresConta2');
 let valoresConta3 = document.getElementById('valoresConta3');
 let btColcuir = document.getElementById('btConcluir');
+let select = document.getElementById('entradaSelect');
+let selecTexto = document.getElementById('selecTexto');
+
 
 
 
 botao.onclick = () => {
-    if(qPessoas.value == '' || total.value == ''){
-      alert("Campo vazio!");
-    } else if(select.value == 'Incluir taxa de serviço ?'){
-        alert('marque a taxa de serviço');
-    }
-    else{
+    if(qPessoas.value == '' || total.value == '' || select.value == 'Incluir taxa de serviço ?'){
+
+        if(total.value == ''){
+            total.classList.add('red');
+          total.placeholder = "Campo vazio";
+        }
+
+        if(qPessoas.value == ''){
+            qPessoas.classList.add('red');
+          qPessoas.placeholder = "Campo vazio";
+        }
+        
+        if(select.value == 'Incluir taxa de serviço ?'){
+            selecTexto.classList.add('red');
+          selecTexto.textContent = "marque a taxa de serviço";
+        }
+
+    }  else{
         modal.showModal();
     }
 }
@@ -74,6 +88,7 @@ btColcuir.onclick = () => {
     qPessoas.value = '';
     total.value = '';
     document.getElementById('entradaSelect').selectedIndex = 0;
+    total.classList.remove("red");
 }
 
 function calcular(pessoas, valorConta, porcentagem) {

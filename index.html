@@ -15,30 +15,32 @@
 
 
   <div class="geral">
-    <input class="entrada" type="text" id="totalConta" placeholder="Digite o valor da conta"><br>
+    <input class="entrada" type="number" id="totalConta" placeholder="Digite o valor da conta"><br>
 
-    <select class="entradaSelect" id="entradaSelect">
-      <option disabled selected> Incluir taxa de serviço ?</option>
+    <select class="entradaSelect" id="entradaSelect" aria-placeholder="aaa">
+      <option disabled selected id="selecTexto"> Incluir taxa de serviço ?</option>
       <option value="sim">sim</option>
       <option value="nao">não</option>
     </select><br>
 
-    <input class="entrada" type="text" id="qPessoas" placeholder="Digite a quantidade de pagantes"><br>
+    <input class="entrada" type="number" id="qPessoas" placeholder="Digite a quantidade de pagantes"><br>
   </div>
 
   <div id="containerModal">
     <dialog id="modal">
-      <label id="l1">Esse pagamento terá desconto?</label><br>
-      <label id="l2">Apenas para contas pagas em pix, débito ou dinheiro</label><br>
-      <button class="btModal" id="btSim">Sim</button>
-      <button class="btModal" id="btNao">Não</button>
+      <div class="modelTexto">
+        <label id="l1">Esse pagamento terá desconto?</label><br>
+        <label id="l2">Apenas para contas pagas em pix, débito ou dinheiro</label><br>
+        <button class="btModal" id="btSim">Sim</button>
+        <button class="btModal" id="btNao">Não</button>
+      </div>
     </dialog>
 
   </div>
 
   <div id="containerModal2">
     <dialog id="modelT">
-      <div id="alinhaTexModal">
+      <div class="modelTexto2">
         <p class="modalText">Valor da conta:</p>
         <label class="modalText" id="valoresConta1"></label><br>
         <label class="modalText" id="valoresConta2"></label><br>

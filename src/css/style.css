@@ -1,7 +1,7 @@
 body {
     justify-content: center;
     align-items: center;
-    display: grid;   
+    display: grid;
 }
 
 #imagem {
@@ -12,18 +12,26 @@ body {
 
 }
 
-.imagem{
+#imagem:hover{
+    background-color: rgb(0, 0, 0);
+    
+    border-radius: 200px;
+}
+
+
+.imagem {
     /* justify-content: center;
     align-items: center;
     display: flex;
      */
-
-     margin-bottom: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 
 .geral {
-    margin-left: 90px;
+    margin-top: 30px;
+    margin-left: 10px;
     line-height: 50px;
 }
 
@@ -34,8 +42,8 @@ body {
 }
 
 .entrada {
-    width: 200px;
-    height: 16px;
+    width: 400px;
+    height: 42px;
     border-width: 1px;
     padding: 4px;
     margin-top: 5px;
@@ -44,11 +52,14 @@ body {
     border-right-width: 0;
     border-left-width: 0;
     outline: none;
+    font-size: 25px;
 }
 
 .entradaSelect {
-    width: 207px;
-    height: 25px;
+    font-size: 25px;
+    color: rgb(126, 126, 126);
+    width: 407px;
+    height: 45px;
     border-width: 1px;
     padding: 2px;
     margin-top: 5px;
@@ -59,76 +70,113 @@ body {
     outline: none;
 }
 
-.botao {
-    margin-top: 40px;
-    margin-left: 90px;
-    width: 207px;
-    height: 22px;
-    border-radius: 6px;
-    border: none;
-    padding: 4px, 3px, 4px, 12px;
-    background-color: #55555538;
-    color: rgb(0, 0, 0);
-    font-size: 12px;
-    
+#selecTexto {
+    color: red;
 }
 
-button:hover{
-    background-color: rgb(43, 157, 202);
+.botao {
+    margin-top: 190px;
+    margin-left: 10px;
+    width: 407px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    padding: 4px, 3px, 4px, 12px;
+    background-color: #1357d6d7;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+
 }
 
 .btModal {
-    width: 100px;
-    height: 25px;
-    margin-left: 15px;
+    width: 150px;
+    height: 40px;
+    margin-left: 20px;
     margin-top: 10px;
+    padding: 6px;
+    font-size: 20px;
+    color: aliceblue;
+    background-color: rgb(51, 55, 180);
+    border: none;
+    border-radius: 6px;
 }
 
-#containerModal{
+#containerModal {
     justify-content: center;
     align-items: center;
     display: flex;
 }
 
 #modal {
+    width: 400px;
+    height: 200px;
     border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+
+.modelTexto{
+margin-top: 50px;
+margin-left: 15px;
+}
+.modelTexto2{
+margin-top: 50px;
+margin-left: 80px;
 }
 
 #l1 {
     margin-left: 25px;
     font-weight: bold;
+    font-size: 25px;
 }
 
 #l2 {
-    font-size: 11px;
-    margin-left: 10px;
+    font-size: 18px;
+    margin-left: 0px;
     margin-top: 10px;
 
 }
 
-#containerModal2{
+#containerModal2 {
     align-items: center;
     justify-content: center;
     display: flex;
 }
 
 #modelT {
-    height: 200px;
-    width: 300px;
+    width: 500px;
+    height: 300px;
     border-radius: 10px;
- }
-
- #alinhaTexModal{
-    margin-left: 55px;
- }
-
-#btConcluir{
-    font-size: 15px;
-     margin-top: 20px;
-    margin-left: 48px; 
-    
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
-.modalText{
-    font-size: 18px;
+#alinhaTexModal {
+    margin-left: 55px;
+}
+
+#btConcluir {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: 25px;
+    padding: 6px;
+    width: 300px;
+    height: 45px;
+    border: none;
+    color: aliceblue;
+    background-color: rgb(51, 55, 180);
+    border-radius: 6px;
+
+}
+
+.modalText {
+    font-size: 29px;
+}
+
+.red::-webkit-input-placeholder {
+    color: red;
 }
